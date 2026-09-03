@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+<a class="govuk-back-link" onclick="if (window.history.length > 1) { window.history.back(); return false; }">Back
+    </a>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="what-is-your-dob" method="post">
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+        label: {
+          text: "Is there anything we need to do to make taking part in research easier for you?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          text: "For example, needing to take regular breaks, needing to talk loudly or slowly, or having someone accompany you during the research."
+        },
+        id: "full-name",
+        name: "fullName",
+        value: data['fullName']
+      }) }}
+
+       <div class="govuk-button-group">
+          {{ govukButton({
+          text: "Continue",
+          href: "thank-you",
+          classes: "govuk-button"
+          }) }}
+        
+          <a class="govuk-link" href="start">Cancel</a>
+        </div>
+</div>
+
+{% endblock %}

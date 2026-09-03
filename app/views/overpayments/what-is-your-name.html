@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+<a class="govuk-back-link" onclick="if (window.history.length > 1) { window.history.back(); return false; }">Back
+    </a>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="what-is-your-dob" method="post">
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+        label: {
+          text: "What is your full name?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          text: "Include any middle names."
+        },
+        id: "full-name",
+        name: "fullName",
+        value: data['fullName']
+      }) }}
+
+       <div class="govuk-button-group">
+          {{ govukButton({
+          text: "Continue",
+          href: "what-is-your-national-insurance-number",
+          classes: "govuk-button"
+          }) }}
+        
+          <a class="govuk-link" href="start">Cancel</a>
+        </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Request a reassessment of your Carer's Allowance overpayment</h1>
+
+      <p class="govuk-body">We are reassessing Carer’s Allowance overpayment decisions related to employed earnings between 10 April 2015 and 2 September 2025. This is because our guidance on averaging earnings for carers at that time was unclear.</p>
+      <p class="govuk-body">If you were impacted, you may get a refund. Reassessing your case will not result in you owing DWP more money.</p>
+      <p class="govuk-body">We have contacted most carers already. You can request a reassessment if you have not heard from us yet. Submitting a request does not mean that we will give you a quicker decision. </p>
+
+      <h2 class="govuk-heading-m">Who can ask to be reassessed</h2>
+      <p class="govuk-body">Carers who were employed at any point between 10 April 2015 and 2 September 2025 and received varying pay. For example, if they worked irregular hours or were not paid the same amount each time.</p>
+
+      <h2 class="govuk-heading-m">Who cannot be reassessed</h3>
+      <p class="govuk-body">Carers who were solely self-employed between 10 April 2015 and 2 September 2025 because we used different guidance to work out average earnings.</p>
+
+      <h3 class="govuk-heading-m">What you will need for this form</h3>
+      <p class="govuk-body">You will need your:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>National Insurance number</li>
+  <li>full name and date of birth</li>
+  <li>current address</li>
+  <li>name and National Insurance number of the person you provided care for</li>
+</ul>
+<p class="govuk-body">You do not need to provide any evidence with this form.</p>
+
+      <h3 class="govuk-heading-m">What will happen after you submit this form</h3>
+      <p class="govuk-body">We will contact you for extra information or evidence. You may be asked to provide copies of DWP letters, your P45 or payslips from the time you got the overpayment.</p>
+      <p class="govuk-body">Once we have the evidence, we will reassess your case. This will take some time. You do not need to contact us.</p>
+      <p class="govuk-body">After the reassessment, we will send you a letter with our decision about your case.</p>
+  
+
+      {{ govukButton({
+        text: "Start now",
+        href: "did-DWP-ask-you-to-repay",
+        isStartButton: true
+      }) }}
+
+     
+
+    </div>
+
+  </div>
+
+{% endblock %}

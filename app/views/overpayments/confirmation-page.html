@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+<a class="govuk-back-link" onclick="if (window.history.length > 1) { window.history.back(); return false; }">Back
+    </a>
+
+
+
+  <div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Application complete
+          </h1>
+          <div class="govuk-panel__body">
+            Your reference number<br><strong>HDJ2123F</strong>
+          </div>
+        </div>
+           <p class="govuk-body">
+          We will send you a confirmation email if you asked for one.</p>
+
+           <p class="govuk-body">
+          You do not need to provide your form reference number if you contact us about your request. You can save it for your personal records if you would like.</p>
+       
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          We will contact you for extra information or evidence. You may be asked to provide copies of DWP letters, your P45 or payslips from the time you got the overpayment.
+        </p>
+        <p class="govuk-body">
+          Once we have the evidence, we will reassess your case. This will take some time. You do not need to contact us.
+        </p>
+         <p class="govuk-body">
+          After the reassessment, we will send you a letter with our decision about your case.
+        </p>
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

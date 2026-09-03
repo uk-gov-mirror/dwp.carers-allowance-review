@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+<a class="govuk-back-link" onclick="if (window.history.length > 1) { window.history.back(); return false; }">Back
+    </a>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Declaration
+      </h1>
+    </legend>
+    <p class="govuk-body">By submitting this form, you are confirming that:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>to the best of your knowledge, the answers you are providing are correct</li>
+  <li>you are happy for DWP to investigate your overpayment</li>
+  <li>you are happy for DWP to contact you if they need further information</li>
+</ul>
+  
+<div class="govuk-button-group">
+          {{ govukButton({
+          text: "Agree and submit",
+          href: "confirmation-page",
+          classes: "govuk-button"
+          }) }}
+</div>
+
+  </div>
+
+{% endblock %}

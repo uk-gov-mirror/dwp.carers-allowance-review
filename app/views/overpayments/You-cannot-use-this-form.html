@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+<a class="govuk-back-link" onclick="if (window.history.length > 1) { window.history.back(); return false; }">Back
+    </a>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/overpayment-answer" method="post">
+
+      <h1 class="govuk-heading-l">
+        You cannot use this form to request a reassessment</h1>
+
+      <p class="govuk-body">This form is only for carers who had an overpayment due to irregular employed earnings between 15 April 2015 and 2 September 2025.</p>
+
+      <p class="govuk-body">You can only use this form once.</p>
+
+       <p class="govuk-body">
+  For all other overpayments, you can <a href="#" class="https://www.gov.uk/mandatory-reconsideration">challenge a benefit decision (opens in new tab).</a>.
+</p>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+     <div class="govuk-button-group">
+          {{ govukButton({
+          text: "Continue",
+          href: "what-is-your-name",
+          classes: "govuk-button"
+          }) }}
+        
+          <a class="govuk-link" href="start">Cancel</a>
+        </div>
+
+  
+
+    </div>
+
+  </div>
+
+{% endblock %}
