@@ -7,19 +7,20 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
     <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+      CA Independent Review Prototype
     </h1>
-  <h2 class="govuk-heading-l">
-      Independant Review Self Identify Pilot
-    </h2>
-    <p class="govuk-body">
-  <a href="overpayments/start" class="govuk-link" rel="noreferrer noopener" target="_blank">Go to start page</a>
-</p>
+  <h2 class="govuk-heading-m">
+      Self Identify Pilot
+  </h2>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  {{ govukButton({
+    text: "Start now",
+    href: "overpayments/start",
+    isStartButton: true
+  }) }}
+    
   </div>
 </div>
 

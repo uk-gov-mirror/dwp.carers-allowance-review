@@ -1,5 +1,5 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "Carer's Allowance Independent Review",
   "useServiceNavigation": true,
   "plugins": {
     "govuk-frontend": {
