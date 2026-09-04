@@ -28,21 +28,21 @@
       <p class="govuk-body">You can only use this form once.</p>
 
        <p class="govuk-body">
-  For all other overpayments, you can <a href="#" class="https://www.gov.uk/mandatory-reconsideration">challenge a benefit decision (opens in new tab).</a>.
-</p>
+        For all other overpayments, you can <a href="https://www.gov.uk/mandatory-reconsideration" class="govuk-link" rel="noreferrer noopener" target="_blank">challenge a benefit decision (opens in new tab)</a>.
+      </p>
+
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
-     <div class="govuk-button-group">
-          {{ govukButton({
-          text: "Continue",
-          href: "what-is-your-name",
-          classes: "govuk-button"
-          }) }}
-        
-          <a class="govuk-link" href="start">Cancel</a>
-        </div>
+      <div class="govuk-button-group">
+        {{ govukButton({
+        text: "Continue",
+        href: "what-is-your-name",
+        classes: "govuk-button"
+        }) }}
+      
+        <a class="govuk-link" href="start">Cancel</a>
+      </div>
 
-  
 
     </div>
 
